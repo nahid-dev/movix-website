@@ -8,6 +8,7 @@ import Home from "./pages/home/Home";
 import Details from "./pages/details/Details";
 import SearchResult from "./pages/searchResult/SearchResult";
 import NotFoundPage from "./pages/404/NotFoundPage";
+import Header from "./components/header/Header";
 
 function App() {
   const dispatch = useDispatch();
@@ -28,6 +29,7 @@ function App() {
   };
   return (
     <BrowserRouter>
+      <Header></Header>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/:mediaType/:id" element={<Details></Details>}></Route>
