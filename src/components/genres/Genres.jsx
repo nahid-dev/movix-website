@@ -6,14 +6,12 @@ const Genres = ({ data }) => {
   const { genres } = useSelector((state) => state.home);
   return (
     <div className="genres">
-      {data?.map((g) => {
-        if (!genres[g]?.name) return;
+      {data?.map((g) => (
         <div className="genre" key={g}>
           <span>{genres[g]?.name}</span>
           abc
-        </div>;
-        console.log(genres[g]?.name);
-      })}
+        </div>
+      ))}
     </div>
   );
 };
