@@ -10,6 +10,7 @@ import SearchResult from "./pages/searchResult/SearchResult";
 import NotFoundPage from "./pages/404/NotFoundPage";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
+import Explore from "./pages/explore/Explore";
 
 function App() {
   const dispatch = useDispatch();
@@ -56,6 +57,7 @@ function App() {
           path="/search/:query"
           element={<SearchResult></SearchResult>}
         ></Route>
+        <Route path="/explore/:mediaType" element={<Explore></Explore>}></Route>
         <Route path="*" element={<NotFoundPage></NotFoundPage>}></Route>
       </Routes>
       <Footer></Footer>

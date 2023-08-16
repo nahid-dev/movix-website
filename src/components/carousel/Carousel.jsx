@@ -16,7 +16,7 @@ import Genres from "../genres/Genres";
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
-const Carousel = ({ data, loading, endPoint }) => {
+const Carousel = ({ data, loading, endPoint, title }) => {
   console.log(endPoint);
 
   const carouselContainer = useRef();
@@ -51,6 +51,7 @@ const Carousel = ({ data, loading, endPoint }) => {
   return (
     <div className="carousel">
       <ContentWrapper>
+        {title && <div className="carouselTitle">{title}</div>}
         <BsFillArrowLeftCircleFill
           className="carouselLeftNav arrow"
           onClick={() => navigation("left")}
